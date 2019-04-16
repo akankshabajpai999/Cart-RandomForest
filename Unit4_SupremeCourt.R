@@ -1,7 +1,5 @@
-# Unit 4 - "Judge, Jury, and Classifier" Lecture
+# "Judge, Jury, and Classifier" Lecture
 
-
-# VIDEO 4
 
 # Read in the data
 stevens = read.csv("stevens.csv")
@@ -42,7 +40,7 @@ plot(perf)
 
 
 
-# VIDEO 5 - Random Forests
+# Random Forests
 
 # Install randomForest package
 install.packages("randomForest")
@@ -63,9 +61,6 @@ PredictForest = predict(StevensForest, newdata = Test)
 table(Test$Reverse, PredictForest)
 (40+74)/(40+37+19+74)
 
-
-
-# VIDEO 6
 
 # Install cross-validation packages
 install.packages("caret")

@@ -1,7 +1,3 @@
-# Unit 4, Recitation
-
-
-# VIDEO 2
 
 # Read in data
 boston = read.csv("boston.csv")
@@ -25,10 +21,6 @@ plot(boston$LON, boston$LAT)
 summary(boston$MEDV)
 points(boston$LON[boston$MEDV>=21.2], boston$LAT[boston$MEDV>=21.2], col="red", pch=20)
 
-
-
-# VIDEO 3
-
 # Linear Regression using LAT and LON
 plot(boston$LAT, boston$MEDV)
 plot(boston$LON, boston$MEDV)
@@ -41,10 +33,6 @@ points(boston$LON[boston$MEDV>=21.2], boston$LAT[boston$MEDV>=21.2], col="red", 
 
 latlonlm$fitted.values
 points(boston$LON[latlonlm$fitted.values >= 21.2], boston$LAT[latlonlm$fitted.values >= 21.2], col="blue", pch="$")
-
-
-
-# Video 4
 
 # Load CART packages
 library(rpart)
@@ -73,10 +61,6 @@ abline(h=42.21)
 abline(h=42.17)
 points(boston$LON[boston$MEDV>=21.2], boston$LAT[boston$MEDV>=21.2], col="red", pch=20)
 
-
-
-# VIDEO 5
-
 # Let's use all the variables
 
 # Split the data
@@ -104,9 +88,6 @@ tree.pred = predict(tree, newdata=test)
 tree.sse = sum((tree.pred - test$MEDV)^2)
 tree.sse
 
-
-
-# Video 7
 
 # Load libraries for cross-validation
 library(caret)

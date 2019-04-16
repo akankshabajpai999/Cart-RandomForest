@@ -1,7 +1,4 @@
-# Unit 4 - "Keeping an Eye on Healthcare Costs" Lecture
-
-
-# VIDEO 6
+# "Keeping an Eye on Healthcare Costs" Lecture
 
 # Read in the data
 Claims = read.csv("ClaimsData.csv")
@@ -23,8 +20,6 @@ ClaimsTrain = subset(Claims, spl==TRUE)
 ClaimsTest = subset(Claims, spl==FALSE)
 
 
-# VIDEO 7
-
 # Baseline method
 table(ClaimsTest$bucket2009, ClaimsTest$bucket2008)
 
@@ -40,8 +35,6 @@ as.matrix(table(ClaimsTest$bucket2009, ClaimsTest$bucket2008))*PenaltyMatrix
 
 sum(as.matrix(table(ClaimsTest$bucket2009, ClaimsTest$bucket2008))*PenaltyMatrix)/nrow(ClaimsTest)
 
-
-# VIDEO 8
 
 # Load necessary libraries
 library(rpart)
